@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App!</title>
+
+  <link rel="manifest" href="manifest.json">
+
+  <meta name="theme-color" content="#000000">
+</head>
+<body>
+  <h1>Bom dia!</h1>
+  <p>Pode ser instalado como aplicativo</p>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('✅ Service Worker registrado com sucesso!'))
+        .catch(err => console.log('❌ Erro ao registrar o Service Worker:', err));
+    }
+  </script>
+</body>
+</html>
